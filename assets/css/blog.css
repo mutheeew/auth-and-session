@@ -1,0 +1,23 @@
+section {
+  margin: 50px;
+}
+
+header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-project {
+  flex: 1;
+  align-items: center;
+}
+
+.desc-project {
+  padding-left: 20px;
+  flex: 1;
+}

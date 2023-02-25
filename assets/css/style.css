@@ -1,0 +1,152 @@
+body {
+  background-color: rgb(230, 230, 230);
+  margin: 0;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left a {
+  color: black;
+  padding-left: 30px;
+}
+
+.nav-left ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.logo img {
+  width: 40px;
+  height: 27px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav-right {
+  background-color: black;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-right: 90px;
+}
+
+.nav-right a {
+  color: white;
+}
+
+section {
+  margin: 90px;
+  padding: 50px 5%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #dbdbdb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about p {
+  text-align: justify;
+}
+
+section div {
+  padding-bottom: 50px;
+}
+
+.contact {
+  background-color: #0f0f0f;
+  padding: 5px 20px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.profil {
+  width: 250px;
+  height: 300px;
+  margin-left: 50px;
+  border: 1px solid #dbdbdb;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #dbdbdb;
+}
+
+.profil img {
+  width: 250px;
+  padding-bottom: 15px;
+}
+
+.profil h1,
+p {
+  margin: 0;
+  text-align: center;
+}
+
+.socmed a {
+  padding-left: 15px;
+}
+.fa-circle,
+.fa-brands {
+  color: black;
+}
+
+.fab {
+  color: white;
+}
+
+/* page contact */
+form {
+  width: 350px;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form div {
+  margin-top: 10px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  color: white;
+  background-color: rgb(21, 21, 21);
+  padding: 10px 25px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 270px;
+}

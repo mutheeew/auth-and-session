@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="stylesheet" href="assets/css/project.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>form-project</title>
+  </head>
+  <body>
+    <!-- bagian navbar -->
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <a href="https://dumbways.id/" class="logo"><img src="assets/img/logo.png" /></a>
+          </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="project.html">My Project</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </nav>
+    <!-- bagian form -->
+    <form onsubmit="getData(event)">
+      <div class="container">
+        <h1>ADD MY PROJECT</h1>
+      </div>
+      <div>
+        <label for="project-name">Project Name</label>
+        <input type="text" id="project-name" class="input-form" required />
+      </div>
+      <div class="input-date">
+        <div class="input">
+          <label for="date-start">Start Date</label>
+          <input type="date" id="date-start" class="input-form" required />
+        </div>
+        <div class="input">
+          <label for="date-end">End Date</label>
+          <input type="date" id="date-end" class="input-form" required />
+        </div>
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <textarea id="description" class="input-form" required></textarea>
+      </div>
+      <div>
+        <label>Technologies</label>
+        <div class="input-checkbox">
+          <label for="node-js" class="label-techno">
+            <input type="checkbox" id="node-js" class="techno-right" />
+            Node JS
+          </label>
+          <label for="next-js" class="label-techno">
+            <input type="checkbox" id="next-js" class="techno-left" />
+            Next JS
+          </label>
+          <label for="react-js" class="label-techno">
+            <input type="checkbox" id="react-js" class="techno-right" />
+            React JS
+          </label>
+          <label for="typescript" class="label-techno">
+            <input type="checkbox" id="typescript" class="techno-left" />
+            TypeScript
+          </label>
+        </div>
+      </div>
+      <div class="upload-image">
+        <label for="upload-image">Upload Image</label>
+        <div class="input-icon">
+          <input type="file" id="upload-image" class="input-file" required />
+          <i class="fa-solid fa-paperclip"></i>
+        </div>
+      </div>
+      <button type="submit" class="submit">Submit</button>
+    </form>
+    <!-- project -->
+    <section>
+      <h1>MY PROJECT</h1>
+      <div class="container" id="content-card">
+        <div class="card" id="project-card">
+          <a href="detail-project.html">
+            <div class="image-project">
+              <img src="assets/img/1.jpg" />
+            </div>
+            <h3>Dumbways Mobile App</h3>
+            <h5>Durasi : 3 bulan</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolore aliquam placeat, nobis quis illo?</p>
+            <div class="tech-icon">
+              <img src="assets/icon/node.svg" />
+              <img src="assets/icon/next-js.svg" />
+              <img src="assets/icon/react.svg" />
+              <img src="assets/icon/typescript.svg" />
+            </div>
+          </a>
+          <div class="manipulation">
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </div>
+        </div>
+        <div class="card" id="project-card">
+          <a href="detail-project.html">
+            <div class="image-project">
+              <img src="assets/img/1.jpg" />
+            </div>
+            <h3>Dumbways Mobile App</h3>
+            <h5>Durasi : 3 bulan</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolore aliquam placeat, nobis quis illo?</p>
+            <div class="tech-icon">
+              <img src="assets/icon/node.svg" />
+              <img src="assets/icon/next-js.svg" />
+              <img src="assets/icon/react.svg" />
+              <img src="assets/icon/typescript.svg" />
+            </div>
+          </a>
+          <div class="manipulation">
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </div>
+        </div>
+        <div class="card" id="project-card">
+          <a href="detail-project.html">
+            <div class="image-project">
+              <img src="assets/img/1.jpg" />
+            </div>
+            <h3>Dumbways Mobile App</h3>
+            <h5>Durasi : 3 bulan</h5>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt dolore aliquam placeat, nobis quis illo?</p>
+            <div class="tech-icon">
+              <img src="assets/icon/node.svg" />
+              <img src="assets/icon/next-js.svg" />
+              <img src="assets/icon/react.svg" />
+              <img src="assets/icon/typescript.svg" />
+            </div>
+          </a>
+          <div class="manipulation">
+            <a href="#">Edit</a>
+            <a href="#">Delete</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
