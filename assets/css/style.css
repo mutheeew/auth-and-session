@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: rgb(230, 230, 230);
   margin: 0;
   font-family: 'Arial Narrow', Arial, sans-serif;
@@ -40,6 +40,12 @@ nav {
 
 .nav-right a {
   color: white;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+body {
+  background-color: rgb(211, 211, 211);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 section {
