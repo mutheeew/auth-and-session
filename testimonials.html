@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <link rel="stylesheet" href="assets/css/testimonials.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <a href="https://dumbways.id/" class="logo"><img src="assets/img/logo.png" /></a>
+          </li>
+          <li class="item-collapse"><a href="index.html">Home</a></li>
+          <li class="item-collapse"><a href="project.html">My Project</a></li>
+          <li class="item-collapse"><a class="active" href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="nav-right item-collapse">
+        <a href="contact.html">Contact Me</a>
+      </div>
+      <div id="bars">
+        <button onclick="openBars()">
+          <i class="fa-2x fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="hamburger-nav" id="hamburger-nav">
+      <a href="index.html">Home</a>
+      <a href="project.html">My Project</a>
+      <a href="project.html">Testimonials</a>
+      <a href="contact.html"> <button>Contact</button></a>
+    </div>
+    <div class="container">
+      <h1>My Testimonials</h1>
+      <section class="testimonials" id="testimonials">
+        <!-- <div class="testimonial">
+                <img src="assets/profile/profile.png" class="profile-testimonial" />
+                <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lectus eu
+                    libero venenatis gravida eget vel odio."</p>
+                <p class="author">- Surya Elidanto</p>
+            </div> -->
+      </section>
+    </div>
+    <script src="assets/js/bar.js"></script>
+    <script src="assets/js/testimonials.js"></script>
+  </body>
+</html>
