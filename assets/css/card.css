@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  background-color: rgb(211, 211, 211);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hamburger-nav {
+  display: none;
+}
+
+.hamburger-nav a {
+  color: black;
+  background-color: #b9b9b9;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+a button {
+  background-color: black;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+section {
+  margin: 50px;
+  padding: 50px 200px;
+  text-align: justify;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #dbdbdb;
+}
+
+.contacts {
+  display: flex;
+}
+
+.contacts div {
+  padding-left: 20px;
+}
+
+.contact {
+  margin-top: 20px;
+  background-color: #0f0f0f;
+  width: 80px;
+  padding: 5px 20px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+div {
+  padding-top: 20px;
+}
+
+.contact a {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.socmed {
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.socmed a {
+  padding-left: 15px;
+}
+
+.fa-circle,
+.fa-brands {
+  color: black;
+}
+
+.fab {
+  color: white;
+}
+
+.profil {
+  padding: 15px;
+  border: 1px solid #dbdbdb;
+  width: 350px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #dbdbdb;
+  text-align: center;
+}
+
+.profil img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.profil h1,
+p {
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    padding: 20px 100px;
+  }
+  .profil {
+    margin: 50px auto 0;
+  }
+  .hamburger-nav {
+    display: block;
+  }
+}

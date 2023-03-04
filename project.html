@@ -17,14 +17,24 @@
           <li>
             <a href="https://dumbways.id/" class="logo"><img src="assets/img/logo.png" /></a>
           </li>
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="project.html">My Project</a></li>
+          <li class="item-collapse"><a href="index.html">Home</a></li>
+          <li class="item-collapse"><a class="active" href="project.html">My Project</a></li>
         </ul>
       </div>
-      <div class="nav-right">
+      <div class="nav-right item-collapse">
         <a href="contact.html">Contact Me</a>
       </div>
+      <div id="bars">
+        <button onclick="openBars()">
+          <i class="fa-2x fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
+    <div class="hamburger-nav" id="hamburger-nav">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="contact.html"> <button>Contact</button></a>
+    </div>
     <!-- bagian form -->
     <form onsubmit="getData(event)">
       <div class="container">
@@ -37,11 +47,11 @@
       <div class="input-date">
         <div class="input">
           <label for="date-start">Start Date</label>
-          <input type="date" id="date-start" class="input-form" required />
+          <input type="date" id="date-start" class="input-start-end" required />
         </div>
         <div class="input">
           <label for="date-end">End Date</label>
-          <input type="date" id="date-end" class="input-form" required />
+          <input type="date" id="date-end" class="input-start-end" required />
         </div>
       </div>
       <div>
@@ -145,5 +155,6 @@
       </div>
     </section>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/bar.js"></script>
   </body>
 </html>

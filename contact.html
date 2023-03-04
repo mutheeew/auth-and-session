@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/nav.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <title>contact</title>
   </head>
   <body>
@@ -13,14 +15,24 @@
           <li>
             <a href="https://dumbways.id/" class="logo"><img src="assets/img/logo.png" /></a>
           </li>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="project.html">My Project</a></li>
+          <li class="item-collapse"><a href="index.html">Home</a></li>
+          <li class="item-collapse"><a class="active" href="project.html">My Project</a></li>
         </ul>
       </div>
-      <div class="nav-right">
+      <div class="nav-right item-collapse">
         <a href="contact.html">Contact Me</a>
       </div>
+      <div id="bars">
+        <button onclick="openBars()">
+          <i class="fa-2x fa-solid fa-bars"></i>
+        </button>
+      </div>
     </nav>
+    <div class="hamburger-nav" id="hamburger-nav">
+      <a href="index.html">Home</a>
+      <a href="project.html">Project</a>
+      <a href="contact.html"> <button>Contact</button></a>
+    </div>
     <!-- bagian form -->
     <form>
       <h1>GET IN TOUCH</h1>
@@ -53,4 +65,5 @@
     </form>
   </body>
   <script src="assets/js/form.js"></script>
+  <script src="assets/js/bar.js"></script>
 </html>
