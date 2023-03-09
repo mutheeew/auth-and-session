@@ -3,83 +3,177 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/nav.css" />
-    <link rel="stylesheet" href="assets/css/card.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <title>Day 1 - Creating Card</title>
   </head>
-  <body>
-    <nav>
-      <div class="nav-left">
-        <ul>
-          <li>
-            <a href="https://dumbways.id/" class="logo"><img src="assets/img/logo.png" /></a>
-          </li>
-          <li class="item-collapse"><a class="active" href="index.html">Home</a></li>
-          <li class="item-collapse"><a href="project.html">My Project</a></li>
-          <li class="item-collapse"><a href="testimonials.html">Testimonials</a></li>
-        </ul>
-      </div>
-      <div class="nav-right item-collapse">
-        <a href="contact.html">Contact Me</a>
-      </div>
-      <div id="bars">
-        <button onclick="openBars()">
-          <i class="fa-2x fa-solid fa-bars"></i>
+  <body class="bg-body-secondary">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container mx-5">
+        <a class="navbar-brand" href="https://dumbways.id/"><img src="assets/img/logo.png" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-3">
+              <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="project.html">Add Project</a>
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn-dark">Contact Me</a>
+        </div>
       </div>
     </nav>
-    <div class="hamburger-nav" id="hamburger-nav">
-      <a href="index.html">Home</a>
-      <a href="project.html">Project</a>
-      <a href="contact.html"> <button>Contact</button></a>
-    </div>
-    <section>
-      <div class="container">
-        <h1>Hi Welcome to my hut</h1>
-        <p>
-          My name is Muthmainnah, you can call me Mute. I was born in Cirebon and now i live in Bogor. I join with Dumbways.id because lempeng aja si, pengen belajar. Thankyou. lorem ajalah bingung. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Voluptatum magni iusto expedita cum qui ipsam aspernatur molestias repellat quo consectetur. Dolorem perspiciatis adipisci odio, placeat quasi porro modi alias sed. Eius fugiat nemo ipsum aliquam! Voluptas
-          repellat corporis velit, culpa quos aut fuga nemo? Soluta animi illum unde accusamus neque?
-        </p>
-        <div class="contacts">
-          <div class="contact">
-            <a href="contact.html">Contact</a>
+    <div class="container bg-body my-5 p-5 shadow rounded">
+      <div class="row">
+        <div class="col-8">
+          <h1 class="py-3">Hi Welcome to my hut</h1>
+          <p class="text-justify" style="text-align: justify">
+            My name is Muthmainnah, you can call me Mute. I was born in Cirebon and now i live in Bogor. I join with Dumbways.id because lempeng aja si, pengen belajar. Thankyou. lorem ajalah bingung. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Voluptatum magni iusto expedita cum qui ipsam aspernatur molestias repellat quo consectetur. Dolorem perspiciatis adipisci odio, placeat quasi porro modi alias sed. Eius fugiat nemo ipsum aliquam! Voluptas
+            repellat corporis velit, culpa quos aut fuga nemo? Soluta animi illum unde accusamus neque?
+          </p>
+          <div class="d-flex justify-content-start align-items-center py-3">
+            <a href="button" class="btn btn-dark rounded-5 px-4">Contact</a>
+            <a href="#" class="text-decoration-none px-3 link-dark">Download CV <i class="bi bi-download px-2"></i></a>
           </div>
-          <div>
-            <a href="#">Download CV <img src="https://img.icons8.com/sf-black/20/null/downloading-updates.png" /></a>
-          </div>
-        </div>
 
-        <div class="socmed">
-          <a href="https://www.linkedin.com/in/muthmainnah-muthmainnah-122a32199/">
-            <span class="fa-stack fa-1x">
-              <i class="fa-solid fa-circle fa-stack-2x"></i>
-              <i class="fab fa-linkedin-in fa-stack-1x"></i>
-            </span>
-          </a>
-          <a href="https://www.instagram.com/embercettembok/">
-            <span class="fa-stack fa-1x">
-              <i class="fa-solid fa-circle fa-stack-2x"></i>
-              <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
-          <a href="https://www.instagram.com/embercettembok/">
-            <i class="fa-brands fa-facebook fa-2xl"></i>
-          </a>
-          <a href="https://twitter.com/Embercettembok">
-            <span class="fa-stack fa-1x">
-              <i class="fa-solid fa-circle fa-stack-2x"></i>
-              <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
+          <div class="d-flex align-items-center py-5 column-gap-3">
+            <a href="https://www.linkedin.com/in/muthmainnah-muthmainnah-122a32199/">
+              <span class="fa-stack fa-1x">
+                <i class="fa-solid fa-circle fa-stack-2x" style="color: black"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <a href="https://www.instagram.com/embercettembok/">
+              <span class="fa-stack fa-1x">
+                <i class="fa-solid fa-circle fa-stack-2x" style="color: black"></i>
+                <i class="fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <a href="https://www.instagram.com/embercettembok/">
+              <i class="fa-brands fa-facebook fa-2xl" style="color: black"></i>
+            </a>
+            <a href="https://twitter.com/Embercettembok">
+              <span class="fa-stack fa-1x">
+                <i class="fa-solid fa-circle fa-stack-2x" style="color: black"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </div>
         </div>
-        <div class="profil">
-          <img src="./assets/img/mute.png" alt="profil" />
-          <h1>Muthmainnah</h1>
-          <p>Fullstack Developer</p>
+        <div class="col-4">
+          <div class="card shadow-sm">
+            <img src="./assets/img/mute.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Muthmainnah</h5>
+              <p class="card-text">Fullstack Developer</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <script src="assets/js/bar.js"></script>
+    </div>
+    <div class="container-fluid bg-body">
+      <div class="project text-center py-5">
+        <h1>My Project</h1>
+      </div>
+      <div class="cards d-flex flex-wrap column-gap-5 row-gap-5 mx-5 justify-content-center">
+        <div class="card shadow" style="width: 19rem">
+          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
+            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
+            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-flex justify-content-around">
+              <img src="assets/icon/node.svg" />
+              <img src="assets/icon/next-js.svg" />
+              <img src="assets/icon/react.svg" />
+              <img src="assets/icon/typescript.svg" />
+            </div>
+            <div class="d-flex column-gap-3 pt-3">
+              <a href="#" class="btn btn-dark w-50">Edit</a>
+              <a href="#" class="btn btn-dark w-50">Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow" style="width: 19rem">
+          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
+            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
+            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-flex justify-content-around">
+              <img src="assets/icon/node.svg" />
+              <img src="assets/icon/next-js.svg" />
+              <img src="assets/icon/react.svg" />
+              <img src="assets/icon/typescript.svg" />
+            </div>
+            <div class="d-flex column-gap-3 pt-3">
+              <a href="#" class="btn btn-dark w-50">Edit</a>
+              <a href="#" class="btn btn-dark w-50">Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow" style="width: 19rem">
+          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
+            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
+            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-flex justify-content-around">
+              <img src="assets/icon/node.svg" />
+              <img src="assets/icon/next-js.svg" />
+              <img src="assets/icon/react.svg" />
+              <img src="assets/icon/typescript.svg" />
+            </div>
+            <div class="d-flex column-gap-3 pt-3">
+              <a href="#" class="btn btn-dark w-50">Edit</a>
+              <a href="#" class="btn btn-dark w-50">Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow" style="width: 19rem">
+          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
+            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
+            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-flex justify-content-around">
+              <img src="assets/icon/node.svg" />
+              <img src="assets/icon/next-js.svg" />
+              <img src="assets/icon/react.svg" />
+              <img src="assets/icon/typescript.svg" />
+            </div>
+            <div class="d-flex column-gap-3 pt-3">
+              <a href="#" class="btn btn-dark w-50">Edit</a>
+              <a href="#" class="btn btn-dark w-50">Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow" style="width: 19rem">
+          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
+            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
+            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="d-flex justify-content-around">
+              <img src="assets/icon/node.svg" />
+              <img src="assets/icon/next-js.svg" />
+              <img src="assets/icon/react.svg" />
+              <img src="assets/icon/typescript.svg" />
+            </div>
+            <div class="d-flex column-gap-3 pt-3">
+              <a href="#" class="btn btn-dark w-50">Edit</a>
+              <a href="#" class="btn btn-dark w-50">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
