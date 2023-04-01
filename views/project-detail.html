@@ -22,7 +22,7 @@
               <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link active fw-bold" href="/add-project">Add Project</a>
+              <a class="nav-link active fw-bold" href="/form-add">Add Project</a>
             </li>
           </ul>
           <a href="/contact" class="btn btn-dark">Contact Me</a>
@@ -32,8 +32,8 @@
     <!-- bagian form -->
     <div class="container m-3">
       <div class="title">
-        <h2>{{.Title}}</h2>
-        <p>ID: {{.Id}}</p>
+        <h2>{{.Project.Title}}</h2>
+        <!-- <p>ID: {{.id}}</p> -->
       </div>
       <div class="row justify-content-start column-gap-3">
         <div class="col left"><img src="/assets/img/1.jpg" alt="Article Image" /></div>
@@ -41,24 +41,40 @@
           <h4>Duration</h4>
           <div class="icon-calendar">
             <i class="fa-regular fa-calendar-days"></i>
-            12 Jan 2021 - 11 feb 2021
+            {{.startDate}} - {{.endDate}}
           </div>
           <div class="icon-clock">
             <i class="fa-solid fa-stopwatch"></i>
-            1 month
+            {{.Duration}}
           </div>
           <h4 class="pt-3">Technology</h4>
           <div class="icon-technology coloumn-gap-3">
-            <div><img src="/assets/icon/node.svg" /> Node JS</div>
-            <div><img src="/assets/icon/next-js.svg" /> Next JS</div>
-            <div><img src="/assets/icon/react.svg" /> React JS</div>
-            <div><img src="/assets/icon/typescript.svg" /> Typescript</div>
+            <div>
+              {{if .Project.Node}}
+              <img src="/assets/icon/node.svg" /> Node JS
+              {{end}}
+            </div>
+            <div>
+              {{if .Project.Next}}
+              <img src="/assets/icon/next-js.svg" /> Next JS
+              {{end}}
+            </div>
+            <div>
+              {{if .Project.React}}
+              <img src="/assets/icon/react.svg" /> React JS
+              {{end}}
+            </div>
+            <div>
+              {{if .Project.Type}}
+              <img src="/assets/icon/typescript.svg" /> Typescript
+              {{end}}
+            </div>
           </div>
         </div>
       </div>
       <div class="content">
         <p>
-          <span style="background-color: transparent; color: rgb(0, 0, 0)">{{.Description}}</span>
+          <span style="background-color: transparent; color: rgb(0, 0, 0)">{{.Project.Description}}</span>
         </p>
       </div>
     </div>

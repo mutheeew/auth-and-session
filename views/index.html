@@ -5,11 +5,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-    <title>Day 1 - Creating Card</title>
+    <title>Home</title>
   </head>
   <body class="bg-body-secondary">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/img/logo.png" id="image" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/">Home</a>
+            </li>
+            {{if .Flash.FlashStatus}}
+            <li class="nav-item ms-3">
+              <a class="nav-link fw-semibold active text-danger" href="/form-add">Add Project</a>
+            </li>
+            {{end}}
+          </ul>
+
+          <div class="d-flex justify-content-end">
+            {{if .Flash.FlashStatus}}
+              <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0">
+                {{.Flash.FlashName}}
+                      <li class="nav-item ms-3">
+                          <a class="nav-link" href="/logout">Logout</a>
+                      </li>
+                  {{else}}
+                      <li class="nav-item">
+                      <a class="nav-link" href="/form-register">Register</a>
+                      </li>
+                      <li class="nav-item ms-3">
+                          <a class="nav-link" href="/form-login">Login</a>
+                      </li>
+                  {{end}}
+              </ul>
+              <a class="btn btn-danger btn-submit ms-5" href="/contact">Contact Me</a>
+          </div>
+        </div>
+      </div>
+  </nav>
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container mx-5">
         <a class="navbar-brand" href="https://dumbways.id/"><img src="assets/img/logo.png" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,10 +65,28 @@
               <a class="nav-link" href="/form-add">Add Project</a>
             </li>
           </ul>
+          <div class="d-flex justify-content-end">
+            <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-danger active fw-semibold" href="/form-register">Register</a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="nav-link" href="/form-login">Login</a>
+                </li>
+            </ul>
           <a href="/contact" class="btn btn-dark">Contact Me</a>
+          </div>
         </div>
       </div>
-    </nav>
+    </nav> -->
+    <!-- alert -->
+    {{if .Flash.FlashStatus}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Login Success!</strong> you could add New Project now.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{end}}
+    <!--  -->
     <div class="container bg-body my-5 p-5 shadow rounded">
       <div class="row">
         <div class="col-8">
@@ -35,7 +94,7 @@
           <p class="text-justify" style="text-align: justify">
             My name is Muthmainnah, you can call me Mute. I was born in Cirebon and now i live in Bogor. I join with Dumbways.id because lempeng aja si, pengen belajar. Thankyou. lorem ajalah bingung. Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Voluptatum magni iusto expedita cum qui ipsam aspernatur molestias repellat quo consectetur. Dolorem perspiciatis adipisci odio, placeat quasi porro modi alias sed. Eius fugiat nemo ipsum aliquam! Voluptas
-            repellat corporis velit, culpa quos aut fuga nemo? Soluta animi illum unde accusamus neque?
+            repellat corporis velit, culpa quos aut fuga nemo? Soluta animi illum unde accusamus neque? {{.Flash.FlashName}}
           </p>
           <div class="d-flex justify-content-start align-items-center py-3">
             <a href="/contact" class="btn btn-dark rounded-5 px-4">Contact</a>
@@ -70,8 +129,8 @@
           <div class="card shadow-sm">
             <img src="./assets/img/mute.png" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Muthmainnah</h5>
-              <p class="card-text">Fullstack Developer</p>
+              <h5 class="card-title text-center">Muthmainnah</h5>
+              <p class="card-text text-center">Fullstack Developer</p>
             </div>
           </div>
         </div>
@@ -82,96 +141,37 @@
         <h1>My Project</h1>
       </div>
       <div class="cards d-flex flex-wrap column-gap-5 row-gap-5 mx-5 justify-content-center">
+        {{range $index, $data := .Projects}}
         <div class="card shadow" style="width: 19rem">
           <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
-            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
-            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="/project-detail/{{$data.ID}}" target="_blank"><h5 class="card-title my-0">{{$data.Title}}</h5></a>
+            
+            <h7 class="text-secondary py-0">Durasi: {{$data.Duration}}</h7>
+            <p class="card-text py-2">{{$data.Description}}</p>
             <div class="d-flex justify-content-around">
-              <img src="assets/icon/node.svg" />
-              <img src="assets/icon/next-js.svg" />
-              <img src="assets/icon/react.svg" />
-              <img src="assets/icon/typescript.svg" />
+              {{if $data.Node}}
+              <img src="assets/icon/node.svg" name="node"/>
+              {{end}}
+              {{if $data.Next}}
+              <img src="assets/icon/next-js.svg" name="next"/>
+              {{end}}
+              {{if $data.React}}
+              <img src="assets/icon/react.svg" name="react"/>
+              {{end}}
+              {{if $data.Type}}
+              <img src="assets/icon/typescript.svg" name="type"/>
+              {{end}}
             </div>
             <div class="d-flex column-gap-3 pt-3">
-              <a href="#" class="btn btn-dark w-50">Edit</a>
-              <a href="#" class="btn btn-dark w-50">Delete</a>
+              {{if $.Flash.FlashStatus}} 
+              <a href="/edit-project/{{$data.ID}}" class="btn btn-dark w-50">Edit</a>
+              <a href="/delete-project/{{$data.ID}}" class="btn btn-dark w-50">Delete</a>
+              {{end}}
             </div>
           </div>
         </div>
-        <div class="card shadow" style="width: 19rem">
-          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
-            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
-            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="d-flex justify-content-around">
-              <img src="assets/icon/node.svg" />
-              <img src="assets/icon/next-js.svg" />
-              <img src="assets/icon/react.svg" />
-              <img src="assets/icon/typescript.svg" />
-            </div>
-            <div class="d-flex column-gap-3 pt-3">
-              <a href="#" class="btn btn-dark w-50">Edit</a>
-              <a href="#" class="btn btn-dark w-50">Delete</a>
-            </div>
-          </div>
-        </div>
-        <div class="card shadow" style="width: 19rem">
-          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
-            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
-            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="d-flex justify-content-around">
-              <img src="assets/icon/node.svg" />
-              <img src="assets/icon/next-js.svg" />
-              <img src="assets/icon/react.svg" />
-              <img src="assets/icon/typescript.svg" />
-            </div>
-            <div class="d-flex column-gap-3 pt-3">
-              <a href="#" class="btn btn-dark w-50">Edit</a>
-              <a href="#" class="btn btn-dark w-50">Delete</a>
-            </div>
-          </div>
-        </div>
-        <div class="card shadow" style="width: 19rem">
-          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
-            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
-            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="d-flex justify-content-around">
-              <img src="assets/icon/node.svg" />
-              <img src="assets/icon/next-js.svg" />
-              <img src="assets/icon/react.svg" />
-              <img src="assets/icon/typescript.svg" />
-            </div>
-            <div class="d-flex column-gap-3 pt-3">
-              <a href="#" class="btn btn-dark w-50">Edit</a>
-              <a href="#" class="btn btn-dark w-50">Delete</a>
-            </div>
-          </div>
-        </div>
-        <div class="card shadow" style="width: 19rem">
-          <img src="assets/img/1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title my-0">Dumbways Mobile Apps 2021</h5>
-            <h7 class="text-secondary py-0">Durasi: 3 bulan</h7>
-            <p class="card-text py-2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div class="d-flex justify-content-around">
-              <img src="assets/icon/node.svg" />
-              <img src="assets/icon/next-js.svg" />
-              <img src="assets/icon/react.svg" />
-              <img src="assets/icon/typescript.svg" />
-            </div>
-            <div class="d-flex column-gap-3 pt-3">
-              <a href="#" class="btn btn-dark w-50">Edit</a>
-              <a href="#" class="btn btn-dark w-50">Delete</a>
-            </div>
-          </div>
-        </div>
+        {{end}}
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

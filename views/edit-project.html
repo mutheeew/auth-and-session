@@ -30,44 +30,44 @@
       </div>
     </nav>
     <!-- bagian form -->
-    <form action="/add-project" method="POST" class="my-5">
+    <form action="/update-project/{{.Project.ID}}" method="POST" class="my-5">
       <div class="container" style="width: 30rem">
-        <h2 class="text-center fw-bold">ADD MY PROJECT</h2>
+        <h2 class="text-center fw-bold">EDIT MY PROJECT</h2>
         <div class="mb-3">
           <label for="project-name" class="form-label fw-bold">Project Name</label>
-          <input type="text" class="form-control" name="project-name" id="project-name" />
+          <input type="text" class="form-control" name="project-name" value="{{.Project.Title}}" id="project-name" />
         </div>
         <div class="row mb-3">
           <div class="col">
             <label for="start-date" class="form-label fw-bold">Start Date</label>
-            <input type="date" name="start-date" class="form-control" />
+            <input type="date" name="start-date" class="form-control" value="{{.StartDate}}" />
           </div>
           <div class="col">
             <label for="end-date" class="form-label fw-bold">End Date</label>
-            <input type="date" name="end-date" class="form-control" />
+            <input type="date" name="end-date" class="form-control" value="{{.EndDate}}" />
           </div>
         </div>
         <div class="mb-3">
           <label for="description" class="form-label fw-bold">Description</label>
-          <textarea class="form-control" name="input-description" id="input-description" rows="3"></textarea>
+          <textarea class="form-control" name="input-description" id="input-description" rows="3" value="{{.Description}}"></textarea>
         </div>
         <div class="mb-3">
-          <label for="Technologies" class="form-label fw-bold">Technologies</label>
+          <label for="project-name" class="form-label fw-bold">Technologies</label>
           <div class="grid gap-3">
             <div class="p-2 g-col-6">
-              <input class="form-check-input" type="checkbox" value="Node JS" id="node" name="node"/>
+              <input class="form-check-input" type="checkbox" value="{{.Project.Node}}" id="node" name="node"/>
               <label class="form-check-label" name="node" for="node">Node JS</label>
             </div>
             <div class="p-2 g-col-6">
-              <input class="form-check-input" type="checkbox" value="Next JS" id="next" name="next"/>
+              <input class="form-check-input" type="checkbox" value="{{.Project.Next}}" id="next" name="next"/>
               <label class="form-check-label" name="next" for="next">Next JS</label>
             </div>
             <div class="p-2 g-col-6">
-              <input class="form-check-input" type="checkbox" value="React JS" id="react" name="react"/>
+              <input class="form-check-input" type="checkbox" value="{{.Project.React}}" id="react" name="react"/>
               <label class="form-check-label" name="react" for="react">React JS</label>
             </div>
             <div class="p-2 g-col-6">
-              <input class="form-check-input" type="checkbox" value="TypeScript" id="type" name="type"/>
+              <input class="form-check-input" type="checkbox" value="{{.Project.Type}}" id="type" name="type"/>
               <label class="form-check-label" name="type" for="type">TypeScript</label>
             </div>
           </div>
@@ -77,7 +77,7 @@
           <input class="form-control" type="file" id="formFile" />
         </div>
         <div class="mt-3 d-flex justify-content-end">
-          <button class="btn btn-dark">Submit</button>
+          <button class="btn btn-dark">Update</button>
         </div>
       </div>
     </form>
